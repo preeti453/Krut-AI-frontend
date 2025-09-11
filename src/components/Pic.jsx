@@ -13,7 +13,7 @@ const Pic = () => {
         <h1>Your Vision Dictates</h1>
         <h1>Krut's Actions</h1>
 
-        <div >
+        <div className='getbutton'>
           <button className="getStarted"><img src={arrow} alt="" />Get Started for free</button>
         </div>
 

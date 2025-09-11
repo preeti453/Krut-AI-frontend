@@ -81,7 +81,7 @@
 }
 
 
-@media (min-width: 326px) and (max-width: 475px) {
+@media (min-width: 318px) and (max-width: 475px) {
   .partner1 {
     width: 88vw;
     height: 200px;
@@ -98,7 +98,11 @@
   }
 
   .partner-logo img{
-    width: 210px;
+    width: 200px;
+  }
+
+  .second-partner h1{
+    font-size: 30px;
   }
 }
 

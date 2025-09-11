@@ -42,7 +42,8 @@
     color: rgb(106, 217, 223);
     background-color: black;
     /* padding: 20px 40px ; */
-    padding: 2vw 3vw;
+    padding: 1.8vw 3vw;
+    border: none;
     border-radius: 40px;
 
 
@@ -65,6 +66,17 @@ height: 30px;
     .text h1{
         font-size:30px;
         line-height: 1;
+    }
+    .text {
+        height: 30vh;
+    }
+
+    .getStarted{
+        font-size: 3vw;
+    }
+
+    .getbutton img{
+        width: 20px;
     }
 }
 
