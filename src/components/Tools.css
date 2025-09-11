@@ -186,9 +186,9 @@
   .card-grid {
     grid-template-columns: 1fr; /* single column */
   }
-  .card-grid .card:nth-child(n + 5) {
+  /* .card-grid .card:nth-child(n + 5) {
     display: none; 
-  }
+  } */
 }
 
 /* <= 480px: extra comfy on phones */

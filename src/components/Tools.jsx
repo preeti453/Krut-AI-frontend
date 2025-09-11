@@ -9,9 +9,12 @@ import sixth from '../assets/sixth.mp4'
 import seventh from '../assets/seventh.mp4'
 import eighth from '../assets/eighth.webp'
 
+
 import './Tools.css'
 
 function Tools() {
+  
+
 
 
 
@@ -69,7 +72,7 @@ function Tools() {
       desc: "Optimize your ads with human model images, saving cost & time",
     },
   ]
-    
+  
   return (
 
 
@@ -100,7 +103,8 @@ function Tools() {
       </div>
       
 
-      <button className='button b'>Explore More</button>
+      {/* <button className='button b'>Explore More</button> */}
+
     </div>
 
 
