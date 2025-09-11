@@ -1,0 +1,143 @@
+/* body{
+  background-color: black;
+} */
+/* Container */
+.price-container {
+  width: 100%;
+  display: block;
+
+}
+.price-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+@media (min-width: 1280px) {
+  .price-row {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/* Card shared styles */
+.price {
+  max-width: 500px;
+  /* width: 100%; */
+  margin: 2rem 2rem 1.25rem 2rem; /* mt-14 + mx-8 sm:mx-4 xl:mx-8 sm:my-5 combined */
+  height: 100%;
+  border-radius: 1.875rem;
+  border: 2px solid #005560; /* Represents border-krutNeon */
+  color: white;
+  background-color: black;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+/* For hidden ribbon versions (opacity-0) */
+.opacity-zero {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Content */
+.price-content {
+  padding: 1.75rem 1.75rem 0 1.75rem;
+  /* padding: 1.2rem 1.2rem 0 1.2rem; */
+  /* width: 100%; */
+
+
+}
+.price-title {
+  font-weight: 600;
+  font-size: 1.875rem; /* 3xl */
+  margin-bottom: 1rem;
+}
+.price-subtitle {
+  font-weight: 400;
+  font-size: 1rem; /* text-sm to sm:text-lg */
+  margin-left: 0.75rem;
+}
+.price-desc {
+  font-weight: 300;
+  font-size: 1.125rem; /* text-base to sm:text-xl */
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+    width: 100%;
+}
+.price-price {
+  font-weight: 600;
+  font-size: 1.5rem; /* 2xl to sm:text-3xl */
+  margin-bottom: 1rem;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+/* Buttons */
+.price-button {
+  font-weight: 700;
+  border-radius: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  width: 75%;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* Individual button gradients */
+.try-for-free {
+  border: none;
+  color: black;
+  background-image: linear-gradient(rgb(255, 255, 255) 60.19%, rgb(0, 0, 0) 325.69%);
+}
+.get-plus {
+   border: none;
+  color: black;
+  background-image: linear-gradient(rgb(255, 255, 255) 60.19%, rgb(0, 0, 0) 325.69%);
+}
+.be-a-pro {
+   border: none;
+  color: black;
+  background-image: linear-gradient(
+    rgb(255, 255, 255) -225.69%,
+    rgb(1, 221, 233) 35.95%,
+    rgb(55, 0, 62) 141.48%
+  );
+}
+
+/* Features */
+.price-features {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.25rem;
+  border-top: 1px solid #00D3EE; ;
+  border-left: 1px solid #005560;
+  border-right: 1px solid #005560;
+  border-bottom: 1px solid #005560;
+  border-radius: 1.35rem 1.35rem 1.35rem 1.35rem;
+  font-weight: 500;
+  font-size: 1.1rem; /* text-base to sm:text-lg */
+  line-height: 2.4rem; /* leading-8 to sm:leading-10 */
+  color: white;
+}
+.price-features p {
+  margin: 0.5rem 0;
+}
+.ms-3 {
+  margin-left: 0.75rem;
+}
+
+.btn {
+  padding: 10px 40px;
+  font-size: 20px;
+  font-weight: 400;
+  /* margin: 30px; */
+  margin: 0px auto;
+}

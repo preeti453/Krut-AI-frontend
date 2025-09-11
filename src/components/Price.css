@@ -1,0 +1,164 @@
+.price-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 60px;
+    max-width: 1200px;
+    margin: 60px auto;
+  
+}
+
+.planCard{
+
+    border:2px solid#005560;
+    border-bottom: none;
+    padding-left: 10px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+}
+
+.plan-name {
+
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.plan-desc {
+  font-size: larger;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.plan-price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.plan-btn {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 26px;
+  padding: 14px 40px;
+  font-size: 30px;
+  font-weight: 700;
+  display: block;
+ margin: 1rem auto;
+
+}
+
+.btn {
+  padding: 10px 40px;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 30px;
+}
+
+.highlight-btn {
+  background: linear-gradient(to bottom, #14e0eb, #0ab8cc, #1c7195);
+  padding: 15px 50px;
+}
+
+.plancontent{
+    margin: 36px 0 0 24px;
+    padding-bottom: 60px;
+    padding-right: 10px;
+    padding-top: 20px;
+}
+
+
+.plan-wrapper{
+    position: relative;
+    margin-bottom: 150px;
+}
+
+
+.features{
+  
+    border-top:1px solid #005560 ;
+    border-left: 2px solid #005560;
+    border-right: 2px solid #005560;
+    border-bottom: 2px solid #005560;
+    border-radius: 20px 20px 30px 30px;
+    position: absolute;
+    top: 90%;
+    width: 99%;
+
+  
+
+    
+}
+.features ul {
+  padding: 10px 40px;
+  margin: 0;
+}
+
+.features ul li {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 40px;
+  list-style: none;
+  margin: 3px 0;
+}
+
+
+
+ @media (max-width: 1024px) {
+
+
+  .price-container {
+    grid-template-columns: 1fr;  
+    justify-items: center;
+  }
+
+  .planCard {
+    width: 360px;
+    padding-bottom: 20px; 
+  }
+
+  .features {
+    position: absolute;
+    top: 85%;    
+    width: 99%;
+  }
+
+  .plan-btn{
+      padding: 14px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  }
+
+
+}
+
+@media (max-width: 420px) {
+
+    .plan-wrapper{
+        margin-bottom: 100px;
+    }
+  .planCard {
+    width: 270px;
+    padding-bottom: 20px; 
+  }
+
+  .features {
+    top: 88%;   
+    width: 98.51%;
+    border-radius: 16px;
+  }
+
+  .features ul li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .features ul {
+    padding: 10px 20px;
+  }
+}
+
+

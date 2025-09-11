@@ -1,0 +1,17 @@
+
+
+.mainLogo{
+    width: 288px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+@media (max-width:468px){
+    .mainLogo{
+        display: none;
+    }
+}
+
+
+

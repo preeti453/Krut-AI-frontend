@@ -1,0 +1,77 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+
+
+body {
+  background-color: black;
+  background-position: center center;
+   background-size: clamp(100vw, 80vw, 1200px); /**/
+  color: white;
+  font-family: "Satoshi", sans-serif;
+
+ 
+
+}
+
+.maincontainer {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+}
+
+.Container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #001616 20%,
+    #001718 70%,
+    #000000 100%
+  );
+
+
+}
+
+.secondContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+.content-wrapper {
+  /* max-width: 1200px; */
+    max-width: clamp(90vw, 70vw, 1200px);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  /* padding: 0 1rem; */
+  padding: 0 2vw;
+}
+
+@media screen and (max-width:1024px){
+  .Container{
+    min-height: 86vh;
+    max-width: 100%;
+  }
+}
+

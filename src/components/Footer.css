@@ -1,0 +1,155 @@
+.footer-container{
+    max-width: 1280px;
+    display: flex;
+  
+   justify-content: space-evenly;
+    
+    align-items: flex-start;
+    
+   gap: 100px;
+}
+
+.footer-container h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+
+.email-box {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    border: 1px solid #888;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 400px;
+}
+
+.email-box input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+}
+
+.right {
+    display: flex;
+    gap: 80px;
+    margin-top: 30px;
+}
+
+.table h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.table ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.table ul li {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 8px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.table ul li:hover {
+    color: #00D4EF;
+}
+
+@media (max-width: 1400px) {
+  .features ul li {
+    white-space: normal;  /* allow words to wrap */
+    word-break: break-word; /* ensures long words split if needed */
+  }
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+    font-size: 24px;
+}
+
+.location {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #aaa;
+}
+
+.legal {
+    font-size: 16px;
+    font-weight: 400;
+    color: #aaa;
+   
+}
+
+.copyright{
+    margin-bottom: 40px;
+}
+
+.social-icons img{
+  width: 32px;
+  height: 32px;
+}
+
+
+@media (max-width: 1028px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 40px;  
+    align-items: flex-start; 
+  }
+
+  .email-box {
+    width: 100%;         
+    max-width: 420px;
+  }
+
+  .right {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .footer-container {
+    padding: 30px 20px;
+  }
+
+  .footer-container h1 {
+    font-size: 32px;  
+  }
+
+ 
+  .email-box {
+    max-width: 100%;
+  }
+
+  .social-icons img{
+    width: 20px;
+    height: 20px;
+  }
+
+  .location{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+  }
+
+  .legal{
+    font-size: 12px;
+  }
+}

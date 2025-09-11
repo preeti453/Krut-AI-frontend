@@ -1,0 +1,159 @@
+.partner-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.partner1 {
+  margin: 20px;
+  width: 720px;
+
+  height: 314px;
+
+  border-radius: 46px;
+
+  border: 1px solid #00d4ef;
+  text-align: center;
+
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.partner1 h1 {
+  font-size: 60px;
+  /* font-size: 4.688vw; */
+  font-weight: 700;
+  padding: 2.4rem 0;
+
+  font-weight: 700;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* gap: 2.125vw; */
+  padding: 0 40px;
+  /* padding-bottom: 5px; */
+}
+
+.partner-logos img {
+  max-height: 40px;
+
+}
+
+@media (max-width: 344px) {
+  .partner1 {
+    width: 90vw;
+  
+  }
+  .partner1 h1 {
+    font-size: 28px;
+    padding: 15px;
+    
+  }
+
+  .first-partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+  }
+  .partner-logos {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .partner-logo img{
+    height: 6vh;
+  }
+
+  .second-partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+}
+
+
+@media (min-width: 326px) and (max-width: 475px) {
+  .partner1 {
+    width: 88vw;
+    height: 200px;
+    margin: 20px 25px;
+  }
+  .partner1 h1 {
+    font-size: 25px;
+  }
+  .partner-logos img {
+    /* flex-wrap: wrap; */
+    gap: 7px;
+    height: 20px;
+   
+  }
+
+  .partner-logo img{
+    width: 210px;
+  }
+}
+
+
+@media (min-width: 476px) and (max-width: 772px) {
+  .partner1 {
+    width: 85vw;
+  }
+  .partner1 h1 {
+    font-size: 50px;
+  }
+  .partner-logos {
+    flex-wrap:wrap;
+    gap: 15px;
+    padding: 0 80px;
+   
+    
+  
+  }
+
+  .partner-logos img{
+    height: 30px;
+    
+    
+  }
+  
+  .second-partner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  .partner-logo img{
+    width:180px ;
+    margin-top: -20px;
+  }
+}
+
+
+@media (min-width: 1576px) {
+  .partner1 {
+    width: 75vw;
+  }
+  .partner1 h1 {
+    font-size: 60px;
+  }
+  .partner-logos {
+    flex-wrap: nowrap; 
+  }
+}
+
+@media (max-width:325px){
+  .partner-logos img{
+    height: 20px;
+  }
+}
