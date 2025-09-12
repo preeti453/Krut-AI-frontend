@@ -103,6 +103,10 @@
   height: 32px;
 }
 
+.left img{
+  width: 237px;
+}
+
 
 @media (max-width: 1028px) {
   .footer-container {
@@ -158,4 +162,9 @@
   .table ul li{
     font-size: 15px;
   }
+
+  .left img{
+    width: 180px;
+  }
+
 }

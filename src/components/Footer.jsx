@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className='left'>
                     <h1>Stay ahead of the <span style={{ color: '#00D4EF' }}>curve</span></h1>
                     <h1>with</h1>
-                    <img style={{ width: 237 }} src={logo} alt="" />
+                    <img  src={logo} alt="" />
                     <p>Subscribe Now !</p>
                     <div className="email-box">
                         <input type="text" placeholder='Email' />
