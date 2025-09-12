@@ -8,10 +8,7 @@ const Plan = () => {
         {/* Free Plan */}
         <div
           className="price border-opacity"
-          data-aos="fade-left"
-          data-aos-delay="300"
-          data-aos-anchor="#trigger-right"
-          data-aos-anchor-placement="top-center"
+
         >
  
           <div className="price-content">
@@ -39,10 +36,7 @@ const Plan = () => {
         {/* Plus Plan */}
         <div
           className="price border-opacity"
-          data-aos="fade-left"
-          data-aos-delay="600"
-          data-aos-anchor="#trigger-right"
-          data-aos-anchor-placement="top-center"
+
         >
 
           <div className="price-content">
@@ -68,10 +62,7 @@ const Plan = () => {
         {/* Pro Plan */}
         <div
           className="price"
-          data-aos="fade-left"
-          data-aos-delay="900"
-          data-aos-anchor="#trigger-right"
-          data-aos-anchor-placement="top-center"
+
         >
 
           <div className="price-content">
