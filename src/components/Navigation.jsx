@@ -76,7 +76,7 @@ const Navigation = () => {
                         </li>
 
                         <li onClick={handleClose}>
-                            <Link to="/login" style={{ color: 'white' }}>  className='custom-links'Login</Link>
+                            <Link to="/login" style={{ color: 'white' }} className='custom-links'>  Login</Link>
                         </li>
 
                         <li onClick={handleClose}>
