@@ -54,7 +54,7 @@ const Navigation = () => {
                 <div className={`overlay ${isOpen ? "show" : ""}`}>
                     <ul>
                         <li onClick={handleClose} >
-                            <Link to="/tools" style={{ color: 'white' }}>Tools</Link>
+                            <Link to="/tools" style={{ color: 'white' }} className='custom-links'>Tools</Link>
                         </li>
 
                         <li onClick={handleClose}>
@@ -72,15 +72,15 @@ const Navigation = () => {
                         </li>
 
                         <li onClick={handleClose}>
-                            <Link to="/bookademo" style={{ color: 'white' }}>Book a Demo</Link>
+                            <Link to="/bookademo" style={{ color: 'white' }}  className='custom-links'>Book a Demo</Link>
                         </li>
 
                         <li onClick={handleClose}>
-                            <Link to="/login" style={{ color: 'white' }}>Login</Link>
+                            <Link to="/login" style={{ color: 'white' }}>  className='custom-links'Login</Link>
                         </li>
 
                         <li onClick={handleClose}>
-                            <Link to="/signup" style={{ color: 'white' }}>Signup</Link>
+                            <Link to="/signup" style={{ color: 'white' }}  className='custom-links'>Signup</Link>
                         </li>
                     </ul>
                 </div>
