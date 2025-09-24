@@ -4,14 +4,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 5vh;
+  margin-top: 6vh;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: clamp(28px, 6vw, 96px); /* scales between mobile & desktop */
+  font-size: clamp(28px, 8vw, 96px); /* scales between mobile & desktop */
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .para {

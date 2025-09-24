@@ -4,9 +4,11 @@ import one from '../assets/one.webp'
 import two from '../assets/two.webp'
 import three from '../assets/three.webp'
 import discord from '../assets/discord.webp'
+import { useNavigate } from "react-router-dom"
 
 
-const Cards = () => {
+const Cards = ({ showDiscord = true, goBlogs = true }) => {
+  const navigate = useNavigate()
 
   const data = [
     {
@@ -48,24 +50,32 @@ const Cards = () => {
 
       </div>
 
-      <div className="goToButton">
-        <button>Go to Blogs</button>
-      </div>
-
-      <div className="largeContainer">
-        <div className="imageSection">
-          <img src={discord} alt="Discord" />
+      {goBlogs && (
+        <div className="goToButton">
+          <button>Go to Blogs</button>
         </div>
-        <div className="textSection">
-          <p>
-            Share your ideas and get inspired. Connect with like-minded creators and
-            discuss your ideas on our <strong>Discord server</strong>
-          </p>
-          <button className="discordBtn">Join Discord</button>
-        </div>
-      </div>
 
- 
+      )}
+
+      {showDiscord && (
+        <div className="largeContainer">
+          <div className="imageSection">
+            <img src={discord} alt="Discord" />
+          </div>
+          <div className="textSection">
+            <p>
+              Share your ideas and get inspired. Connect with like-minded creators and
+              discuss your ideas on our <strong>Discord server</strong>
+            </p>
+            <button
+
+              className="discordBtn" onClick={() => window.open("https://discord.gg/your-discord-link", "_blank")}>Join Discord</button>
+          </div>
+        </div>
+      )}
+
+
+
 
     </div>
 

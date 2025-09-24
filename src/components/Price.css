@@ -1,12 +1,4 @@
-.price-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
 
-    gap: 60px;
-    max-width: 1200px;
-    margin: 60px auto;
-  
-}
 
 .planCard{
 

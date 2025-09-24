@@ -8,15 +8,17 @@ import fifth from '../assets/fifth.mp4'
 import sixth from '../assets/sixth.mp4'
 import seventh from '../assets/seventh.mp4'
 import eighth from '../assets/eighth.webp'
+import { useNavigate } from "react-router-dom";
 
 
 import './Tools.css'
 
 function Tools() {
+
+    const navigate = useNavigate();
+
+
   
-
-
-
 
   const cards = [
 
@@ -25,12 +27,14 @@ function Tools() {
       src: first,
       title: "Product Studio",
       desc: "Create visually appealing product photoshoots in seconds",
+      slug: "product-studio"
     },
     {
       type: "video",
       src: second,
       title: "Model Studio",
       desc: "Optimize your ads with human model images, saving cost & time",
+      slug:"model-studio"
     },
     {
       type: "video",
@@ -38,6 +42,7 @@ function Tools() {
       src: third,
       title: "Background Remover",
       desc: "Instantly remove background with AI precision in seconds with automatic image recognition",
+      slug:"background-remover"
     },
     {
       type: "video",
@@ -45,12 +50,14 @@ function Tools() {
       src: fourth,
       title: "Upscaler",
       desc: "Instantly scale ANY image to 4K clarity with a click using AI precision",
+      slug:"upscaler"
     },
     {
       type: "video",
       src: fifth,
       title: "Magic Remove",
       desc: "Eliminate unwanted objects and fix imperfections instantly and accurately",
+      slug:"magic-remove"
     },
     {
       type: "video",
@@ -58,18 +65,21 @@ function Tools() {
       src: sixth,
       title: "Magic Replace",
       desc: "Swap unwanted objects effortlessly with pixels perfect clarity",
+      slug:"magic-replace"
     },
     {
       type: "video",
       src: seventh,
       title: "Autofill",
       desc: "Extend existing images to your desired specifications",
+      slug:"autofill"
     },
     {
       type: "image",
       src: eighth,
       title: "Model Studio",
       desc: "Optimize your ads with human model images, saving cost & time",
+      slug:"virtual-try-on"
     },
   ]
   
@@ -86,7 +96,10 @@ function Tools() {
 
       <div className="card-grid">
         {cards.map((card, index) => (
-          <div className="card" key={index}>
+          <div className="card" key={index} 
+            onClick={() => navigate(`/tools/${card.slug}`)} // <-- navigation
+            style={{ cursor: "pointer" }}
+          >
             <div className="card-media">
               {card.type === "video" ? (
                 <video src={card.src} controls autoPlay loop muted />

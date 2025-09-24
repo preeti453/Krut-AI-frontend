@@ -1,9 +1,11 @@
 import React from "react";
 import './Hero.css'
 import krut from "../assets/krut.mp4"
+import { useNavigate } from 'react-router-dom'
 
 
 function Hero() {
+    const navigate = useNavigate();
     return (
         <main className="hero">
             <h1>AI <span style={{ color: '#00D4EF' }}>Co-pilot</span> for</h1>
@@ -20,7 +22,7 @@ function Hero() {
             </ul>
 
             <div className="krutbutton">
-                <button>Try Krut AI</button>
+                <button onClick={()=>navigate("/login")}>Try Krut AI</button>
             </div>
 
        

@@ -37,12 +37,12 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    font-size: 2vw;
+    font-size: 1.6vw;
     font-weight: 300;
     color: rgb(106, 217, 223);
     background-color: black;
     /* padding: 20px 40px ; */
-    padding: 1.8vw 3vw;
+    padding: 1.3vw 2.8vw;
     border: none;
     border-radius: 40px;
 
@@ -72,11 +72,13 @@ height: 30px;
     }
 
     .getStarted{
-        font-size: 3vw;
+        font-size: 1.6vw;
     }
 
     .getbutton img{
         width: 20px;
     }
 }
+
+
 

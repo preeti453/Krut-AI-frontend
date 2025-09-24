@@ -1,47 +1,77 @@
 import React from 'react'
-// import './Pricing.css'
-import './Price.css'
+import './Pricing.css'
+// import './Price.css'
+import { useState } from "react"
 
-const Pricing = ({ plans }) => {
+const Pricing = () => {
 
+    const [selectedTab, setSelectedTab] = useState("yearly");
+    const [currency, setCurrency] = useState("USD");
     return (
         <>
 
+            <div className="price-heading">
+                <h1>The <span style={{ color: "#00D4EF" }}>Ideal Plans</span> </h1>
+            </div>
+            <div className="pricing-container">
+                <div className="tabs">
+                    <input
+                        type="radio"
+                        id='radio-1'
+                        name='tabs'
+                        checked={selectedTab === "monthly"}
+                        onChange={() => setSelectedTab("monthly")}
+                        className='tab-radio'
+                    />
 
-        <div className="price-container">
-        {plans.map((plan, index) => (
-          <div key={index} className="plan-wrapper">
-        
-            <div className="planCard">
-              <div className='plancontent'>
-              <h1 className="plan-name">{plan.name}</h1>
-              <p className="plan-desc">{plan.description}</p>
-              <h1 className="plan-price">{plan.price}</h1>
+                    <label htmlFor="radio-1" className='tab'>Monthly</label>
+                    <input
+                        type="radio"
+                        id="radio-2"
+                        name="tabs"
+                        checked={selectedTab === "yearly"}
+                        onChange={() => setSelectedTab("yearly")}
+                        className="tab-radio"
+                    />
+                    <label className="tab" htmlFor="radio-2">
+                        Yearly
+                        <span className="discount">
+                            <span className="font-normal px-0-5">(</span>
+                            20% off
+                            <span className="font-normal px-0-5">)</span>
+                        </span>
+                    </label>
+                    <span
+                        className={`glider${selectedTab === "monthly" ? " left" : " right"}`}
+                    ></span>
 
-              <button
-                className={`plan-btn ${
-                  plan.buttonText === "Be a Pro" ? "highlight-btn" : ""
-                }`}
-              >
-                {plan.buttonText}
-              </button>
-              </div>
+                </div>
+            </div>
+
+            <div className="price-taxes">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#00D4EF" fill="none">
+                    <path d="M15.5 18.5C15.5 20.433 13.933 22 12 22C10.067 22 8.5 20.433 8.5 18.5" stroke="#00D4EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M19 11.5V12.7558C19 13.5514 19.3161 14.3145 19.8787 14.8771L20.4819 15.4803C20.8136 15.8121 21 16.262 21 16.7311C21 17.708 20.208 18.5 19.2311 18.5H4.76887C3.79195 18.5 3 17.708 3 16.7311C3 16.262 3.18636 15.8121 3.51809 15.4803L4.12132 14.8771C4.68393 14.3145 5 13.5514 5 12.7558V10C5 6.13401 8.13401 3 12 3" stroke="#00D4EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M15.5 3.5L19.5 7.5M21 5.5C21 3.567 19.433 2 17.5 2C15.567 2 14 3.567 14 5.5C14 7.433 15.567 9 17.5 9C19.433 9 21 7.433 21 5.5Z" stroke="#00D4EF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p> Prices inclusive of all taxes, levies and duties.</p>
+              
 
             </div>
 
-            
-            <div className="features">
-              <ul>
-                {plan.features.map((feature, idx) => (
-                  <li key={idx}> ✓ &nbsp;&nbsp;{feature}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
-      </div>
+              <div className="price-currency">
+                    <select
+                        className="currency-select"
+                        value={currency}
+                        onChange={e => setCurrency(e.target.value)}
+                    >
+                        <option value="USD">🇺🇸 USD $</option>
+                        <option value="INR">🇮🇳 INR ₹</option>
+                    </select>
+                </div>
 
-            <button className='button  btn'> Compare</button>
+
 
         </>
 

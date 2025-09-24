@@ -168,3 +168,8 @@
   }
 
 }
+
+.custom-links{
+  text-decoration: none;
+  color: white;
+}

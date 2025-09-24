@@ -1,0 +1,71 @@
+.label-con{
+    background-image: url("../assets/pricingPageBanner.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:95vw;
+    height: 90vh;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+  
+}
+
+.label-text{
+    padding: 40px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+
+.label-b{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    padding: 0.75rem 3.5rem;
+    border-radius: 40px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+
+@media (max-width: 1024px) {
+    .label-con {
+        height: 55vh;
+        width: 95vw;
+    }
+    .label-text {
+        padding: 24px;
+        font-size: 1.125rem;
+    }
+    .label-b {
+        padding: 0.6rem 2.2rem;
+        font-size: 16px;
+        right: 5%;
+        bottom: 10%;
+    }
+}
+
+/* For mobile screens: font, button, and box adapt to fit */
+@media (max-width: 640px) {
+    .label-con {
+        
+           
+        height: 32vh;
+        width: 90vw;
+        
+    }
+    .label-text {
+        padding: 12px;
+        font-size: 0.8rem;
+        
+    }
+    .label-b {
+        padding: 0.4rem 1.2rem;
+        font-size: 14px;
+        border-radius: 20px;
+        right: 4%;
+        bottom: 5%;
+    }
+}

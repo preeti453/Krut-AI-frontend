@@ -1,10 +1,8 @@
-/* body{
-  background-color: black;
-} */
-/* Container */
+
 .price-container {
   width: 100%;
   display: block;
+  margin: 60px auto;
 
 }
 .price-row {
@@ -18,17 +16,18 @@
   .price-row {
     flex-direction: row;
     justify-content: space-evenly;
+   
   }
 }
 
-/* Card shared styles */
+
 .price {
   max-width: 500px;
-  /* width: 100%; */
-  margin: 1rem 2rem 1.25rem 2rem; /* mt-14 + mx-8 sm:mx-4 xl:mx-8 sm:my-5 combined */
+ 
+  margin: 1rem 2rem 1.25rem 2rem; 
   height: 100%;
   border-radius: 1.875rem;
-  border: 2px solid #005560; /* Represents border-krutNeon */
+  border: 2px solid #005560; 
   color: white;
   background-color: black;
   box-sizing: border-box;
@@ -36,7 +35,8 @@
 }
 
 
-/* For hidden ribbon versions (opacity-0) */
+
+
 .opacity-zero {
   opacity: 0;
   pointer-events: none;
@@ -45,24 +45,23 @@
 /* Content */
 .price-content {
   padding: 1.75rem 1.75rem 0 1.75rem;
-  /* padding: 1.2rem 1.2rem 0 1.2rem; */
-  /* width: 100%; */
+
 
 
 }
 .price-title {
   font-weight: 600;
-  font-size: 1.875rem; /* 3xl */
+  font-size: 1.875rem; 
   margin-bottom: 1rem;
 }
 .price-subtitle {
   font-weight: 400;
-  font-size: 1rem; /* text-sm to sm:text-lg */
+  font-size: 1rem; 
   margin-left: 0.75rem;
 }
 .price-desc {
   font-weight: 300;
-  font-size: 1.125rem; /* text-base to sm:text-xl */
+  font-size: 1.125rem; 
   margin-bottom: 1rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -71,7 +70,7 @@
 }
 .price-price {
   font-weight: 600;
-  font-size: 1.5rem; /* 2xl to sm:text-3xl */
+  font-size: 1.5rem; 
   margin-bottom: 1rem;
 }
 
@@ -81,6 +80,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 /* Buttons */
 .price-button {
@@ -92,7 +92,7 @@
   cursor: pointer;
 }
 
-/* Individual button gradients */
+
 .try-for-free {
   border: none;
   color: black;
@@ -123,8 +123,8 @@
   border-bottom: 1px solid #005560;
   border-radius: 1.35rem 1.35rem 1.35rem 1.35rem;
   font-weight: 500;
-  font-size: 1.1rem; /* text-base to sm:text-lg */
-  line-height: 2.4rem; /* leading-8 to sm:leading-10 */
+  font-size: 1.1rem; 
+  line-height: 2.4rem;
   color: white;
 }
 .price-features p {
@@ -138,10 +138,120 @@
   padding: 10px 40px;
   font-size: 20px;
   font-weight: 400;
-  /* margin: 30px; */
+  
   
   margin: 0px auto;
 
   margin-top: -2px;
   margin-bottom: 20px;
+}
+
+.user-count-container {
+  height: 4rem;
+  margin-bottom: 0.75rem; 
+  width: 100%;
+}
+
+.user-count-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+.user-count-content {
+  width: 75%;
+}
+
+.user-count-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem; 
+  color: white;
+}
+
+.user-btn-disabled {
+  margin-left: 0.5rem; 
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem; 
+  border: 1px solid;
+  border-radius: 0.5rem; 
+  font-size: 1.5rem; 
+  color: white;
+  cursor: default;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-btn-active {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  /* background-color: black; */
+  background-color: transparent;
+  color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.user-btn-active:hover {
+  background-color: var(--krutNeon, #00fff0);
+  color: black;
+  border: black;
+}
+
+.user-btn-disabled:hover {
+  background-color: var(--krutNeon, #00fff0);
+  color: black;
+  border: black;
+}
+
+
+
+.user-count-number {
+  min-width: 3.5rem; 
+  text-align: center;
+  font-size: 1.5rem; 
+  font-weight: bold;
+}
+
+@media (min-width: 1280px) {
+  .user-count-number {
+    min-width: 4rem; 
+  }
+}
+
+.user-contact {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-krutNeon {
+  color: var(--krutNeon, #00fff0);
+  cursor: pointer;
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.visibility{
+  visibility: hidden;
 }

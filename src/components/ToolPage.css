@@ -1,0 +1,291 @@
+.product-studio-container {
+  width: 100%;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 2.5rem 0;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+.subtitle-container {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 640px;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1280px) {
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.video-container {
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.studio-video {
+  max-height: 25.875rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .video-container {
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-container {
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
+  }
+}
+
+
+.pair-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pair-img-wrapper {
+  width: 40vw;
+  height: 40vw;
+  position: relative;
+  z-index: 0;
+  left: 1.5rem; /* left-6 (24px) */
+}
+
+.pair-img {
+  width: 40vw;
+  height: 40vw;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  object-fit: cover;
+  border: 1px solid #00fff0; /* Use your actual krutNeon color */
+  position: relative;
+  z-index: -10;
+  background: #000; /* guarantees contrast with image if any transparency */
+}
+
+.pair-blank-box {
+  width: 40vw;
+  height: 40vw;
+  background: #fff;
+  border-radius: 1.5rem; /* 24px, rounded-3xl */
+  border: 1px solid #00fff0; /* Use your actual krutNeon color */
+
+}
+
+.pair-img-right {
+  border-radius: 1.5rem; /* rounded-3xl */
+  background: #fff; /* extra background white for separation if needed */
+  
+}
+
+.pb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-outer {
+  position: absolute;
+
+  left: 50px;
+  bottom: 50px;
+  width: 40%;
+}
+
+.slider-label-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  z-index: 10;
+}
+
+.slider-label-flex {
+  display: flex;
+  height: 45px;
+  align-items: center;
+}
+
+.slider-label-mobile {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 0.5rem;
+  pointer-events: none;
+}
+
+@media (min-width: 1024px) {
+  .slider-label-mobile {
+    display: none;
+  }
+}
+
+.slider-label-desktop {
+  display: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 0.5rem;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .slider-outer {
+    position: unset;
+    margin: 0 auto;
+  }
+  .slider-label-desktop {
+    display: block;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 140px) {
+  .slider-outer {
+    position: unset;
+    margin: 0 auto;
+  }
+  .slider-label-desktop {
+    display: block;
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .slider-label-desktop {
+    font-size: 1.125rem;
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #d1d5db;
+  outline: 2px solid #fff;
+  accent-color: #fff;
+  cursor: ew-resize;
+  appearance: none;
+  background: linear-gradient(
+    to right,
+    #00d4ef 0%,
+    #fff calc((var(--range-value, 1) - 1) * 1%),
+    rgba(0, 0, 0, 0.1) calc(var(--range-value, 1) * 1%),
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  position: relative;
+  margin-top: 50px;
+}
+
+/* Custom styling for slider thumb */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  background: #00d4ef;
+  border-radius: 50%;
+  cursor: ew-resize;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider::-moz-range-thumb {
+  width: 32px;
+  height: 32px;
+  background: #00d4ef;
+  border-radius: 50%;
+  cursor: ew-resize;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide ugly default for ie */
+.slider::-ms-thumb {
+  width: 32px;
+  height: 32px;
+  background: #00d4ef;
+  border-radius: 50%;
+  cursor: ew-resize;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove default appearance for background in all browsers */
+.slider::-webkit-slider-runnable-track,
+.slider::-moz-range-track,
+.slider::-ms-fill-lower,
+.slider::-ms-fill-upper {
+  appearance: none;
+  background: transparent;
+  border: none;
+}
+

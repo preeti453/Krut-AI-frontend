@@ -2,27 +2,34 @@ import React from 'react'
 import "./Navigation.css"
 import logo from "../assets/logo.png"
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
-     const handleClose = () => setIsOpen(false);
+    const navigate = useNavigate();
+    const handleClose = () => setIsOpen(false);
     return (
         <>
             <nav className='navbar'>
-                <div className="logo">
+                <div className="logo" onClick={() => navigate("/")}>
                     <img src={logo} alt="Krut logo" />
                 </div>
 
-                <ul className= "nav-links">
-                    <li>Tools</li>
+                <ul className="nav-links">
+                    <li onClick={() => navigate("/tools")}>Tools</li>
                     <li>Support</li>
-                    <li>Community</li>
-                    <li>Pricing</li>
+                    <li onClick={() => window.open("https://discord.gg/your-discord-link", "_blank")}>
+
+                        Community
+
+                    </li>
+                    <li onClick={() => navigate("/pricing")}>Pricing</li>
                 </ul>
 
-                <div className= "buttons">
-                    <button className='button'>Book a Demo</button>
-                    <button className='button'>Get Started</button>
+                <div className="buttons">
+                    <button onClick={() => navigate("/bookademo")} className='button'>Book a Demo</button>
+                    <button onClick={() => navigate("/login")} className='button'>Get Started</button>
                 </div>
 
                 <div className='hamburger' onClick={() => setIsOpen(!isOpen)}
@@ -43,18 +50,41 @@ const Navigation = () => {
 
                 </div>
 
-              
-            <div className={`overlay ${isOpen ? "show" : ""}`}>
-                <ul>
-                    <li onClick={handleClose}>Tools</li>
-                    <li onClick={handleClose}>Support</li>
-                    <li onClick={handleClose}>Community</li>
-                    <li onClick={handleClose}>Pricing</li>
-                    <li onClick={handleClose}>Book a Demo</li>
-                    <li onClick={handleClose}>Login</li>
-                    <li onClick={handleClose}>Signup</li>
-                </ul>
-            </div>
+
+                <div className={`overlay ${isOpen ? "show" : ""}`}>
+                    <ul>
+                        <li onClick={handleClose} >
+                            <Link to="/tools" style={{ color: 'white' }}>Tools</Link>
+                        </li>
+
+                        <li onClick={handleClose}>
+                            Support
+                        </li>
+
+                        
+
+                        <li onClick={handleClose}>
+                            Community
+                        </li>
+
+                        <li onClick={handleClose}>
+                            Pricing
+                        </li>
+
+                        <li onClick={handleClose}>
+                            <Link to="/bookademo" style={{ color: 'white' }}>Book a Demo</Link>
+                        </li>
+
+                        <li onClick={handleClose}>
+                            <Link to="/login" style={{ color: 'white' }}>Login</Link>
+                        </li>
+
+                        <li onClick={handleClose}>
+                            <Link to="/signup" style={{ color: 'white' }}>Signup</Link>
+                        </li>
+                    </ul>
+                </div>
+
 
 
 

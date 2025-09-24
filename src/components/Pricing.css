@@ -1,203 +1,181 @@
-/* 
-.price-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
- 
-}
-
-.planCard{
-    border:1px solid #00d4ef;
-    border-bottom: none;
-    padding-left: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    position: relative;
-    padding: 40px 10px ;
-
+.price-heading h1{
+    font-size: 96px;
+    font-weight: 700;
+    padding: 40px ;
     
 }
 
-.plan-name {
-  font-size: 2.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+.pricing-container{
+    padding: 40px ;
+    width: 300px;
 }
 
-.plan-desc {
-  font-size: larger;
-  font-weight: 200;
-  margin-bottom: 20px;
+@media  (max-width:750px) {
+    .price-heading h1{
+        font-size: 70px;
+    }
 }
 
-.plan-price {
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 60px;
+@media (max-width:570px){
+    .price-heading h1{
+        font-size: 35px;
+    }
 }
 
-.plan-btn {
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 26px;
-  padding: 14px 40px;
-  font-size: 15px;
-  font-weight: 700;
-  display: block;
- margin: 1rem auto;
-
-}
-
-.features{
-    border:1px solid #00d4ef ;
-    border-radius: 10px;
-    position: absolute;
-    top: 10px;
-    width: 252px;
-}
-
-
-.btn {
-  padding: 10px 40px;
-  font-size: 20px;
-  font-weight: 400;
-  margin: 30px;
-}
-
-.highlight-btn {
-  background: linear-gradient(to bottom, #14e0eb, #0ab8cc, #1c7195);
-  padding: 15px 50px;
-}
-.features{
-    border:1px solid #00d4ef ;
-    border-radius: 10px;
-    position: absolute;
-    top: 349px;
-    width: 252px;
-}
-
-.features ul {
-  padding: 0 40px;
-  margin: 0;
-}
-
-.features ul li {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 40px;
-  list-style: none;
-  margin: 3px 0;
-}
-
-@media (max-width: 1024px) {
-  .c2 {
-    flex-direction: column;
-  }
-
-  .planCard {
-    width: 350px;
-  }
-}
-
-@media (max-width: 420px) {
-  .planCard {
-    width: 250px;
+.price-taxes{
+    width: 85vw;
+    border: 1px solid #00626D;
+    border-left: 8px solid #00626D;
+    border-radius: 20px;
     margin-bottom: 40px;
-    padding: 30px 15px;
-  }
-
-  .features {
-    width: calc(100% + 30px);
-    margin-left: -15px;
-    margin-right: -15px;
-    margin-top: 20px;
-    border-radius: 14px;
-  }
-
-  .features ul li {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 28px;
-  }
-
-  .features ul {
-    padding-right: 50px;
-  }
-}
- */
-
- .price-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: clamp(20px, 5vw, 60px);
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    gap: 1rem;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
 }
 
-.planCard {
-  border: 1px solid #00d4ef;
-  border-radius: 12px;
-  padding: calc(2rem + 10px) calc(1rem + 5px);
+@media (min-width: 1024px) {
+  .pricing-container {
+    width: 400px;
+  }
+}
+
+.tabs {
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.plan-name {
-  font-size: clamp(1rem, 2vw, 2.2rem);
-  font-weight: 600;
-  margin-bottom: 0.6em;
-}
-
-.plan-desc {
-  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
-  font-weight: 300;
-  margin-bottom: 1.5em;
-  text-align: center;
-}
-
-.plan-price {
-  font-size: clamp(1.3rem, 2vw, 1.8rem);
-  font-weight: 600;
-  margin-bottom: 2em;
-}
-
-.plan-btn {
-  background-color: white;
+  justify-content: space-around;
+  /* gap: 1.7rem; */
+  background: #f9f9f9;
+  border-radius: 89px;
+  padding: 0 ;
+  overflow: hidden;
   color: black;
-  border: none;
-  border-radius: 26px;
-  padding: clamp(10px, 2vw, 14px) clamp(25px, 5vw, 40px);
-  font-size: 1rem;
+}
+
+.tab-radio {
+  display: none; 
+}
+
+
+.tab {
+  height: 40px;     
+  display: flex;
+  align-items: center;
+  padding: 0 24px;  
+  font-size: 1.5rem; 
   font-weight: 700;
-  margin-top: auto; /* pushes button to bottom */
+  cursor: pointer;
+  transition: color 0.2s;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+@media (min-width: 640px) {
+  .tab {
+    height: 48px;    /* sm:h-12 */
+  }
+}
+@media (min-width: 1024px) {
+  .tab {
+    font-size: 1.25rem; /* lg:text-xl */
+  }
 }
 
-.features {
-  border: 1px solid #00d4ef;
-  border-radius: 12px;
-  margin-top: calc(1em + 20px);
-  padding: clamp(1rem, 2vw, 1.5rem);
-  width: 100%;
-
+.tab-radio:checked + .tab {
   
+  font-weight: 700;
+}
+
+.discount {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #20598a;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+.px-0-5 {
+  padding-left: 0.125rem;
+  padding-right: 0.125rem;
+}
+
+/* Glider - the tab underline/indicator */
+.glider {
+  position: absolute;
+  bottom: 0;
+  /* left: 4px; */
+  width: calc(52% - 4px);
+  height: 40px;
+  background: #00D4EF;
+  border-radius: 89px;
+  transition: left 0.3s;
+  z-index: 1;
+}
+@media (min-width: 640px) {
+  .glider {
+    height: 48px;
+  }
+}
+
+.left {
+  left: 0px;
+}
+.right {
+  left: calc(50% + 4px);
+}
+
+
+
+.price-currency
+{
+padding: 0 32px;
 
 }
 
-.features ul {
-  padding: 10px 20px;
-  margin: 0;
+@media (max-width:1000px){
+    .price-currency{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+}
+.currency-select {
+  border-radius: 0.5rem;        
+  padding: 0.375rem 2rem;        
+  background: transparent;        
+  border: 1px solid #00fff0;     
+  color: white;                  
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  min-width: 100px;
+  position: absolute;
+  right: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+   
 }
 
-.features ul li {
-  font-size: clamp(0.9rem, 1vw, 1.1rem);
-  font-weight: 500;
-  line-height: 1.8em;
-  list-style: none;
-  margin: 5px 0;
+@media (max-width:1000px){
+    .currency-select{
+        position: unset;
+    }
+}
+
+.currency-select:focus {
+  border-color: #08fff7;         
+}
+
+.currency-select option {
+  color: black;
+  background: white;
+  font-size: 1rem;
 }
