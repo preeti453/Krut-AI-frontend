@@ -213,6 +213,8 @@ const ToolPage = () => {
             {/* CTA Button */}
             <div className="krutbutton pb" >
                 <button onClick={() => navigate("/login")}>Try Krut AI</button>
+                {/* <button onClick={() => console.log("Clicked")}>Try Krut AI</button> */}
+
             </div>
         </div>
     );

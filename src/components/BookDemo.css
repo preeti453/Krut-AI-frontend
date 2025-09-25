@@ -391,7 +391,7 @@ margin: 0 auto;
   .demo-form-root { padding: 1.5rem 1rem; }
   .action-row button { width: 100%; }
   .bg-flex{
-    width: 81vw;
+    width: 100vw;
   }
 }
 

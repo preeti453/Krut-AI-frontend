@@ -97,7 +97,7 @@
 
 .pair-flex {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 }
 
@@ -142,6 +142,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .range {
@@ -153,7 +154,7 @@
 }
 
 .slider-outer {
-  position: absolute;
+  /* position: absolute; */
 
   left: 50px;
   bottom: 50px;
@@ -216,7 +217,7 @@
   }
   .slider-label-desktop {
     display: block;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
@@ -243,7 +244,7 @@
     rgba(0, 0, 0, 0.1) 100%
   );
   position: relative;
-  margin-top: 50px;
+  margin-top: 53px;
 }
 
 /* Custom styling for slider thumb */

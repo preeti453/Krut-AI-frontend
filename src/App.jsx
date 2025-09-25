@@ -40,7 +40,7 @@ const router = createBrowserRouter(
             <Tools />
             <Partners />
             <Cards />
-            <Plan  showExtra={false} showFeatures={true} showButton={true}/>
+            <Plan showExtra={false} showFeatures={true} showButton={true} />
             <Pic />
             <Footer />
           </section>
@@ -60,11 +60,11 @@ const router = createBrowserRouter(
             <div className='secondContainer'>
               <Pic />
               <Footer />
-              <Cards />
+
             </div>
           </div>
 
-          
+
 
 
         </div>
@@ -72,45 +72,43 @@ const router = createBrowserRouter(
 
     },
 
-      {
-    path: "/tools/:toolName",
-    element: (
-      <div className="maincontainer">
-        <ScrollToTop/>
-        <Navigation />
-        <ToolPageWrapper />
-        
-        <Tools/>
-        <Faq/>
-        <Pic/>
-        <Footer />
-      </div>
-    )
-  },
+    {
+      path: "/tools/:toolName",
+      element: (
+        <div className="maincontainer">
+          <ScrollToTop />
+          <Navigation />
+          <ToolPageWrapper />
+
+          <Tools />
+          <Faq />
+          <Pic />
+          <Footer />
+        </div>
+      )
+    },
 
     {
       path: "/pricing",
       element: (
         <>
-        <div className='maincontainer'>
-         
-            <ScrollToTop/>
-            <Navigation/>
-            <Pricing/>
-          
+          <div className='maincontainer'>
+            <div className="Container">
+              <ScrollToTop />
+              <Navigation />
+              <Pricing />
+            </div>
 
-        
-
-          <div className="secondContainer">
-            <Plan showExtra={true} showFeatures={true}  showButton={true}/>
-            <Label/>
-            <Plan showExtra={true} showFeatures={false}  showButton={false}/>
-            <PricingTable/>
-            <Faq/>
-            <Pic/>
-            <Footer/>
+            <div className="secondContainer">
+              <Plan showExtra={true} showFeatures={true} showButton={true} />
+              <Label />
+              <Plan showExtra={true} showFeatures={false} showButton={false} />
+              <PricingTable />
+              <Faq />
+              <Pic />
+              <Footer />
+            </div>
           </div>
-        </div>
         </>
       )
 
@@ -144,17 +142,17 @@ const router = createBrowserRouter(
       element: (
         <>
 
-          <Login mode="login"/>
+          <Login mode="login" />
 
         </>
       )
     },
 
     {
-      path:"/signup",
-      element:(
+      path: "/signup",
+      element: (
         <>
-        <Login mode ="signup"/>
+          <Login mode="signup" />
         </>
       )
     },
@@ -163,8 +161,8 @@ const router = createBrowserRouter(
       path: "/contact",
       element: (
         <div className='maincontainer'>
-          <ScrollToTop/>
-          <Navigation/>
+          <ScrollToTop />
+          <Navigation />
           <ContactUs />
           <Faq />
           <Footer />
@@ -174,18 +172,18 @@ const router = createBrowserRouter(
     },
 
     {
-      path:"/blogs",
-      element :(
+      path: "/blogs",
+      element: (
         <div className="maincontainer">
           <div className="Container">
-          <ScrollToTop/>
-          <Navigation/>
-          <Blogs/>
+            <ScrollToTop />
+            <Navigation />
+            <Blogs />
           </div>
 
-          <Cards showDiscord = {false} goBlogs={false}/>
-          <Pic/>
-          <Footer/>
+          <Cards showDiscord={false} goBlogs={false} />
+          <Pic />
+          <Footer />
         </div>
       )
     }

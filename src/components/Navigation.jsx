@@ -61,27 +61,35 @@ const Navigation = () => {
                             Support
                         </li>
 
-                        
+
 
                         <li onClick={handleClose}>
-                            Community
+                            <a
+                                href="https://discord.gg/your-discord-invite-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ color: 'white' }}
+                                className="custom-links"
+                            >
+                                Community
+                            </a>
                         </li>
 
-                        <li onClick={handleClose}>
-                            Pricing
-                        </li>
+                            <li onClick={handleClose}>
+                                <Link to="/pricing" style={{ color: 'white' }} className='custom-links'>Pricing</Link>
+                            </li>
 
-                        <li onClick={handleClose}>
-                            <Link to="/bookademo" style={{ color: 'white' }}  className='custom-links'>Book a Demo</Link>
-                        </li>
+                            <li onClick={handleClose}>
+                                <Link to="/bookademo" style={{ color: 'white' }} className='custom-links'>Book a Demo</Link>
+                            </li>
 
-                        <li onClick={handleClose}>
-                            <Link to="/login" style={{ color: 'white' }} className='custom-links'>  Login</Link>
-                        </li>
+                            <li onClick={handleClose}>
+                                <Link to="/login" style={{ color: 'white' }} className='custom-links'>  Login</Link>
+                            </li>
 
-                        <li onClick={handleClose}>
-                            <Link to="/signup" style={{ color: 'white' }}  className='custom-links'>Signup</Link>
-                        </li>
+                            <li onClick={handleClose}>
+                                <Link to="/signup" style={{ color: 'white' }} className='custom-links'>Signup</Link>
+                            </li>
                     </ul>
                 </div>
 
