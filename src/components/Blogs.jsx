@@ -1,7 +1,10 @@
 import React from "react";
 import "./Blogs.css";
+import { useNavigate } from "react-router-dom";
 
-const Blogs = () => (
+const Blogs = () => {
+    const navigate = useNavigate()
+    return (
     <div className="blog-section ">
         <h1 className="blog-title">
             Blogs
@@ -25,12 +28,14 @@ const Blogs = () => (
                 <h1 className="blog-sidebar-title">
                     Recent Post
                 </h1>
-                <button className="button">
+                <button className="button" onClick={()=> navigate("/card1")}>
                     Read more
                 </button>
             </div>
         </div>
     </div>
-);
+)
+    
+};
 
 export default Blogs;

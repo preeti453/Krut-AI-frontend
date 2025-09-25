@@ -22,6 +22,7 @@ import PricingTable from './components/PricingTable'
 import Label from './components/Label'
 import Blogs from './components/Blogs'
 
+
 const router = createBrowserRouter(
   [
     {
@@ -93,11 +94,11 @@ const router = createBrowserRouter(
       element: (
         <>
           <div className='maincontainer'>
-            <div className="Container">
+         
               <ScrollToTop />
               <Navigation />
               <Pricing />
-            </div>
+    
 
             <div className="secondContainer">
               <Plan showExtra={true} showFeatures={true} showButton={true} />
@@ -113,6 +114,42 @@ const router = createBrowserRouter(
       )
 
     },
+
+    // {
+    //   path:"/card1",
+    //   element :(
+    //     <div className="maincontainer">
+    //        <ScrollToTop />
+    //       <Navigation/>
+    //       <Card1/>
+    //       <Footer/>
+    //     </div>
+    //   )
+    // },
+
+    //     {
+    //   path:"/card2",
+    //   element :(
+    //     <div className="maincontainer">
+    //        <ScrollToTop />
+    //       <Navigation/>
+    //       <Card2/>
+    //       <Footer/>
+    //     </div>
+    //   )
+    // },
+
+    //         {
+    //   path:"/card3",
+    //   element :(
+    //     <div className="maincontainer">
+    //        <ScrollToTop />
+    //       <Navigation/>
+    //       <Card3/>
+    //       <Footer/>
+    //     </div>
+    //   )
+    // },
 
     {
       path: "/bookademo",
@@ -175,11 +212,11 @@ const router = createBrowserRouter(
       path: "/blogs",
       element: (
         <div className="maincontainer">
-          <div className="Container">
+          
             <ScrollToTop />
             <Navigation />
             <Blogs />
-          </div>
+         
 
           <Cards showDiscord={false} goBlogs={false} />
           <Pic />

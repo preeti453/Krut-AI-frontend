@@ -14,26 +14,30 @@ const Cards = ({ showDiscord = true, goBlogs = true }) => {
     {
       src: one,
       title: "How Does Krut AI Help E-commerce Brands?",
-      desc: "Read more"
+      desc: "Read more",
+      path: "/card1"
     },
     {
       src: two,
       title: "Introducing Krut AI: AI Co-Pilot For E-commerce Marketplaces",
-      desc: "Read more"
+      desc: "Read more",
+      path: "/card2"
     },
     {
       src: three,
       title: "Craft Ads Like A Pro: AI Guides Your Human Model Creation",
-      desc: "Read more"
+      desc: "Read more",
+      path: "/card3"
     },
 
 
   ]
   return (
     <div className='cardbox-container'>
-      <div className="card-boxes">
+      <div className="card-boxes" >
         {data.map((data, index) => (
-          <div className="card-box" key={index}>
+          <div className="card-box" key={index} onClick={() => navigate(data.path)} // 👈 navigate to path
+            style={{ cursor: "pointer" }}>
             <div className="card-box-media">
 
               <img src={data.src} alt={data.title} />

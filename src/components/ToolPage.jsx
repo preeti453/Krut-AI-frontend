@@ -170,8 +170,13 @@ const ToolPage = () => {
                             />
                         </div>
                         {/* Right Blank Box */}
+
+
+
+
                         <div className="pair-blank-box" style={{
-                            backgroundColor:sliderValue === 100 ?"transparent":""
+                            backgroundColor:sliderValue === 100 ?"transparent":"",
+                            
                         }}>
                             <img
                                 className="pair-img pair-img-right"
@@ -179,6 +184,8 @@ const ToolPage = () => {
                                 alt="Product After"
                             />
                         </div>
+
+
                     </div>
 
 

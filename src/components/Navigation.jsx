@@ -5,10 +5,17 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
+import SupportDropdown from './SupportDropdown'
+
 const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useNavigate();
     const handleClose = () => setIsOpen(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+     const [supportOpen, setSupportOpen] = useState(false);
+
+  const toggleSupport = () => setSupportOpen(!supportOpen);
     return (
         <>
             <nav className='navbar'>
@@ -18,7 +25,18 @@ const Navigation = () => {
 
                 <ul className="nav-links">
                     <li onClick={() => navigate("/tools")}>Tools</li>
-                    <li>Support</li>
+
+                    <li className='nav-support'
+                        onMouseEnter={() => setDropdownOpen(true)}
+                        onMouseLeave={() => setDropdownOpen(false)}>
+                        Support
+                        {dropdownOpen && <SupportDropdown />}
+                    </li>
+
+                    {/* <li className="nav-support">
+                        <span className="nav-link">Support</span>
+                        <SupportDropdown /> 
+                    </li> */}
                     <li onClick={() => window.open("https://discord.gg/your-discord-link", "_blank")}>
 
                         Community
@@ -57,8 +75,64 @@ const Navigation = () => {
                             <Link to="/tools" style={{ color: 'white' }} className='custom-links'>Tools</Link>
                         </li>
 
-                        <li onClick={handleClose}>
+                        {/* <li onClick={handleClose}>
                             Support
+                        </li> */}
+
+
+
+                        {/* Support with arrow */}
+                        <li>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                    cursor: "pointer",
+                                    color: "white",
+                                }}
+                                onClick={toggleSupport}
+                            >
+                                <span>Support</span>
+                                <span style={{ marginLeft: "0.5rem" }}>
+                                    {supportOpen ? "▲" : "▼"}
+                                </span>
+                            </div>
+
+                            {/* Dropdown items */}
+                            {supportOpen && (
+                                <ul style={{ paddingLeft: "1rem", marginTop: "0.5rem" }}>
+                                    <li onClick={handleClose}>
+                                        <Link
+                                            to="/blogs"
+                                            className="custom-links"
+                                            style={{ color: "white" }}
+                                        >
+                                            Blogs
+                                        </Link>
+                                    </li>
+                                    <li onClick={handleClose}>
+                                        <a
+                                            href="https://krut-ai.notion.site/Krut-AI-Beta-User-Manual-b2d5df9733cd411e99b4e92a68c7c154"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="custom-links"
+                                            style={{ color: "white" }}
+                                        >
+                                            Tutorial
+                                        </a>
+                                    </li>
+                                    <li onClick={handleClose}>
+                                        <Link
+                                            to="/contact"
+                                            className="custom-links"
+                                            style={{ color: "white" }}
+                                        >
+                                            Contact
+                                        </Link>
+                                    </li>
+                                </ul>
+                            )}
                         </li>
 
 
@@ -75,21 +149,21 @@ const Navigation = () => {
                             </a>
                         </li>
 
-                            <li onClick={handleClose}>
-                                <Link to="/pricing" style={{ color: 'white' }} className='custom-links'>Pricing</Link>
-                            </li>
+                        <li onClick={handleClose}>
+                            <Link to="/pricing" style={{ color: 'white' }} className='custom-links'>Pricing</Link>
+                        </li>
 
-                            <li onClick={handleClose}>
-                                <Link to="/bookademo" style={{ color: 'white' }} className='custom-links'>Book a Demo</Link>
-                            </li>
+                        <li onClick={handleClose}>
+                            <Link to="/bookademo" style={{ color: 'white' }} className='custom-links'>Book a Demo</Link>
+                        </li>
 
-                            <li onClick={handleClose}>
-                                <Link to="/login" style={{ color: 'white' }} className='custom-links'>  Login</Link>
-                            </li>
+                        <li onClick={handleClose}>
+                            <Link to="/login" style={{ color: 'white' }} className='custom-links'>  Login</Link>
+                        </li>
 
-                            <li onClick={handleClose}>
-                                <Link to="/signup" style={{ color: 'white' }} className='custom-links'>Signup</Link>
-                            </li>
+                        <li onClick={handleClose}>
+                            <Link to="/signup" style={{ color: 'white' }} className='custom-links'>Signup</Link>
+                        </li>
                     </ul>
                 </div>
 

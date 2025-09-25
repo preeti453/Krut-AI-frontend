@@ -25,6 +25,34 @@
     
 } */
 
+/* Navigation.css */
+
+.nav-support {
+  position: relative; 
+}
+
+/* .nav-support .support-dropdown {
+  display: none; 
+}
+
+.nav-support:hover .support-dropdown {
+  display: block; 
+}
+
+.nav-support:hover .support-dropdown,
+.support-dropdown:hover {
+  display: block;
+} */
+
+/* .nav-link {
+  cursor: pointer;
+  color: white;
+  padding: 8px 12px;
+  display: inline-block;
+  text-decoration: none;
+} */
+
+
 .nav-links  {
   display: flex;
   gap: 60px;
