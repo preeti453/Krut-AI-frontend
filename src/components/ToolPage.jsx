@@ -174,7 +174,7 @@ const ToolPage = () => {
 
 
 
-                        <div className="pair-blank-box" style={{
+                        {/* <div className="pair-blank-box" style={{
                             backgroundColor:sliderValue === 100 ?"transparent":"",
                             
                         }}>
@@ -183,7 +183,27 @@ const ToolPage = () => {
                                 src={tool.afterImageSrc}
                                 alt="Product After"
                             />
-                        </div>
+                        </div> */}
+
+                        {sliderValue === 100 ? (
+                            // Only show image when slider = 100
+                            <img
+                                className="pair-img pair-img-right"
+                                src={tool.afterImageSrc}
+                                alt="Product After"
+                            />
+                        ) : (
+                            // Show div + image otherwise
+                            <div className="pair-blank-box">
+                                <img
+                                    className="pair-img pair-img-right"
+                                    src={tool.afterImageSrc}
+                                    alt="Product After"
+                                />
+                            </div>
+                        )}
+
+
 
 
                     </div>
