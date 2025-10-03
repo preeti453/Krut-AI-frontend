@@ -65,6 +65,10 @@
     color: #00D4EF;
 }
 
+
+
+
+
 @media (max-width: 1400px) {
   .features ul li {
     white-space: normal;  /* allow words to wrap */
@@ -77,6 +81,7 @@
     gap: 15px;
     margin-top: 25px;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .location {
@@ -172,4 +177,8 @@
 .custom-links{
   text-decoration: none;
   color: white;
+}
+
+.custom-links:hover{
+   color: #00D4EF;
 }

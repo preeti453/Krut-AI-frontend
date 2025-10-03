@@ -14,11 +14,14 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
 
+
 const Footer = () => {
     const navigate = useNavigate();
     //        const goToTool = (toolName) => {
     //     navigate(`/tools?tool=${encodeURIComponent(toolName)}`);
     //   };
+
+    
     return (
         <>
             <div className='footer-container'>
@@ -40,7 +43,7 @@ const Footer = () => {
                     <div className='table'>
                         <h3>Company</h3>
                         <ul>
-                            <li onClick={()=>navigate("/blogs")}>Blogs</li>
+                            <li onClick={() => navigate("/blogs")}>Blogs</li>
                             <li > <Link
                                 to="https://krut-ai.notion.site/Krut-AI-User-Manual-b2d5df9733cd411e99b4e92a68c7c154"
                                 target="_blank"
@@ -91,6 +94,9 @@ const Footer = () => {
                 <span><img   onClick={() => window.open("https://facebook.com/people/Krut-AI/61559205755709/" , "_blank")}src={facebook} alt="" /></span>
                 <span><img  onClick={() => window.open("https://youtube.com/channel/UCTUjDWEOkvDnLHrqX9VKnKw", "_blank")} src={youtube} alt="" /></span>
             </div>
+
+      
+
 
             {/* Location + Legal */}
             <p className="location">📍 Bengaluru, Karnataka, India</p>

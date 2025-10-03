@@ -1,12 +1,12 @@
 .navbar {
-  margin: 15px 25px;
+  margin: 1.5rem  1.8rem;
   max-width: 1280px;
  
   display: flex;
   justify-content: space-between;
  
   align-items: center;
-  gap: 140px;
+  gap: 8.8rem;
   cursor: pointer;
   position: relative;
 
@@ -158,11 +158,13 @@ a{
   }
 }
 
-@media screen and (min-width: 768px) and (max-width:960px){
+@media screen and (min-width: 800px) and (max-width:960px){
 
 
    .navbar{
-    gap: 30px;
+    gap: 15px;
+    width: 90%;
+    gap: 3rem;
 
   }
 
@@ -171,7 +173,7 @@ a{
   }
 
   .nav-links li{
-      font-size: 14px;
+      font-size: .7rem;
   }
 
   .button{
@@ -187,14 +189,14 @@ a{
 @media screen and (max-width: 1024px) {
 
   .navbar{
-    gap: 100px;
-    width: 100%;
+    gap: 2rem;
+    width: 90%;
   }
   .nav-links {
     gap: clamp(10px, 2vw, 20px);
   }
   .nav-links li {
-    font-size: clamp(14px, 1.8vw, 18px);
+    font-size: clamp(14px, 1rem, 18px);
   }
   .buttons {
     gap: 10px;
@@ -208,11 +210,16 @@ a{
 
 
 @media screen and (max-width: 1280px) {
+
+  .navbar{
+    width: 90%;
+    gap: 3rem;
+  }
   .container {
     padding: 0 4vw;
   }
   .nav-links li {
-    font-size: 20px;
+    /* font-size: 1.3rem; */
     font-weight: 400;
   }
 }
@@ -220,12 +227,24 @@ a{
 
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1400px;
+    /* max-width: 1400px; */
+  
     margin: 0 auto;
   }
   .nav-links li {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
+
+  .logo img{
+    width: 200px;
+  }
+
+  /* .button{
+    font-size: 1.4rem;
+    padding: 0.5rem 2rem;
+  } */
+
+
 }
  
 
