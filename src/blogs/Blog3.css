@@ -1,0 +1,48 @@
+.Blog3-p3 p{
+    margin: 4rem 0;
+}
+.ai-human-container {
+  color: white;
+  margin: 4rem 1.25rem;
+  max-width: 900px;
+}
+
+.ai-human-heading, .ai-human-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: left;
+}
+
+.ai-human-subheading {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 10px 0;
+  margin-top: 1.5rem;
+}
+
+.ai-human-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  color: #ddd;
+}
+
+.ai-human-paragraph:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+  .ai-human-container {
+    margin: 3rem 0.75rem;
+  }
+  .ai-human-heading, .ai-human-section-title {
+    font-size: 1.5rem;
+  }
+  .ai-human-subheading {
+    font-size: 1.1rem;
+  }
+  .ai-human-paragraph {
+    font-size: 0.95rem;
+  }
+}

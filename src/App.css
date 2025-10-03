@@ -71,7 +71,7 @@ body {
 
 @media screen and (max-width:1024px){
   .Container{
-    min-height: 86vh;
+    min-height: 30vh;
     max-width: 100%;
   }
 }

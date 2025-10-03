@@ -13,9 +13,10 @@ const Navigation = () => {
     const handleClose = () => setIsOpen(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-     const [supportOpen, setSupportOpen] = useState(false);
+    const [supportOpen, setSupportOpen] = useState(false);
 
-  const toggleSupport = () => setSupportOpen(!supportOpen);
+    // const toggleSupport = () => setSupportOpen(!supportOpen);
+    const toggleSupport = () => setSupportOpen(prev => !prev);
     return (
         <>
             <nav className='navbar'>
@@ -26,12 +27,15 @@ const Navigation = () => {
                 <ul className="nav-links">
                     <li onClick={() => navigate("/tools")}>Tools</li>
 
+
                     <li className='nav-support'
                         onMouseEnter={() => setDropdownOpen(true)}
                         onMouseLeave={() => setDropdownOpen(false)}>
                         Support
                         {dropdownOpen && <SupportDropdown />}
                     </li>
+
+
 
                     {/* <li className="nav-support">
                         <span className="nav-link">Support</span>
@@ -95,7 +99,15 @@ const Navigation = () => {
                             >
                                 <span>Support</span>
                                 <span style={{ marginLeft: "0.5rem" }}>
-                                    {supportOpen ? "▲" : "▼"}
+                                    {supportOpen ? (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M15 12.5L10 7.5L5 12.5" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        </svg>) : (
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M15 7.5L10 12.5L5 7.5" stroke="white" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round"></path>
+                                        </svg>
+                                    )
+                                    }
                                 </span>
                             </div>
 

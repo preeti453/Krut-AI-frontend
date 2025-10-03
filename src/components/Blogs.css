@@ -3,7 +3,7 @@
   margin-bottom: 4rem;    /* my-16 for 2xl */
   color: white;
   text-align: center;
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -42,7 +42,7 @@
 
 @media(min-width: 1536px) {
   .blog-title {
-    font-size: 6rem;     /* 2xl:text-8xl */
+    font-size: 5rem;     /* 2xl:text-8xl */
   }
 }
 
@@ -165,7 +165,7 @@
 
 @media(min-width: 1536px) {
   .blog-main-title {
-    font-size: 3rem;     /* 2xl:text-5xl */
+    font-size: 2.5rem;     /* 2xl:text-5xl */
   }
 }
 
@@ -190,7 +190,7 @@
 
 @media(min-width: 1530px) {
   .blog-main-text {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 400;
     margin-left: 2rem;
     margin-right: 2rem;
@@ -326,5 +326,16 @@
   .blog-sidebar-button {
     font-size: 1.5rem;
     padding: 0.75rem 3.5rem;
+  }
+}
+
+@media (max-width:400px){
+  .blog-main-text{
+    font-size: .7rem;
+    font-weight: 400
+  }
+
+  .blog-main-text{
+    font-size: 0.5rem;
   }
 }

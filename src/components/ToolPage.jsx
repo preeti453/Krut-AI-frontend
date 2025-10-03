@@ -133,10 +133,6 @@ const ToolPage = () => {
                 </div>
 
 
-
-
-
-
                 <div className="video-container">
                     {tool.Src.endsWith(".webp") ? (
                         <img
@@ -210,12 +206,7 @@ const ToolPage = () => {
 
 
                     <div className="slider-outer">
-                        <div className="slider-label-wrapper">
-                            <div className="slider-label-flex">
-                                {/* <span className="slider-label-mobile">Swipe it</span> */}
-                                <span className="slider-label-desktop">Swipe to the Future</span>
-                            </div>
-                        </div>
+
                         <input
                             type="range"
                             id="Slider"
@@ -229,7 +220,25 @@ const ToolPage = () => {
                             style={{
                                 "--range-value": sliderValue,
                             }}
+
+
                         />
+
+                        {sliderValue ===1 && (
+                            <>
+                                <span className="slider-label slider-label-desktop">Swipe to the Future</span>
+                                <span className="slider-label slider-label-mobile">Swipe it</span>
+                            </>
+                        )}
+                        {/* <div className="slider-label-wrapper">
+                            <div className="slider-label-flex">
+                                <span className="slider-label-mobile">Swipe it</span>
+                                <span className="slider-label-desktop">Swipe to the Future</span>
+                            </div>
+
+                        </div> */}
+
+
                     </div>
 
                 </div>

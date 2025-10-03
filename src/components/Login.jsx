@@ -16,7 +16,7 @@ const Login = ({mode}) => {
             <img src={logo_black} alt="Logo" />
           </div>
 
-          <h2>{mode === "login" ? "Welcome Back!" : "Create an account"}</h2>
+          <h2 className='h2'>{mode === "login" ? "Welcome Back!" : "Create an account"}</h2>
 
          
           {mode === "signup" && (

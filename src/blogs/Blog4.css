@@ -1,0 +1,71 @@
+.upscalers-container {
+  /* max-width: 900px; */
+  margin: 2rem auto;
+  padding: 0 0rem;
+  color: white;
+}
+
+ .p4 {
+  margin: 3rem 0;
+  font-size: 1rem ;
+  font-weight: 400;
+}
+
+
+.upscalers-heading {
+  font-size: 1.8rem;
+  font-weight: 550;
+  padding: 10px 0;
+  margin-top: 2rem;
+}
+
+.upscalers-subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 20px 0 10px 0;
+}
+
+.upscalers-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.upscalers-list {
+
+  list-style: none;
+  margin: 0;
+  /* padding-left: 1.5rem; */
+}
+
+.upscalers-list li {
+  position: relative;
+  /* padding-left: 1.2rem; */
+  margin-top: 0.1rem;
+  font-size: 1rem;
+}
+
+
+
+@media (max-width: 640px) {
+  .upscalers-container {
+    margin: 2rem 1rem;
+  }
+  .upscalers-heading {
+    font-size: 1.6rem;
+    padding: 8px 0;
+  }
+  .upscalers-subheading {
+    font-size: 1.1rem;
+  }
+  .upscalers-paragraph {
+    font-size: 0.9rem;
+  }
+  .upscalers-list {
+    padding-left: 1rem;
+  }
+  .upscalers-list li {
+    padding-left: 0.9rem;
+  }
+}

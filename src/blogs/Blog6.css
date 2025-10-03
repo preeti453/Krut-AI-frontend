@@ -1,0 +1,64 @@
+.p6 {
+  margin: 3rem 0;
+  font-size: 1rem ;
+  font-weight: 400;
+}
+
+
+.ai-art-creative-container {
+  /* max-width: 900px; */
+  margin: 2rem auto;
+  /* padding: 0 1rem; */
+  color: white;
+}
+
+.ai-art-creative-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 10px 0;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.ai-creative{
+  margin-top: .8rem;
+}
+
+.ai-art-creative-subheading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  padding: 4px 0;
+}
+
+.ai-art-creative-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.ai-art-creative-link {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.ai-art-creative-link:hover {
+  color: #32e9fa;
+}
+
+@media (max-width: 640px) {
+  .ai-art-creative-container {
+    margin: 1.5rem 1rem;
+  }
+  .ai-art-creative-heading {
+    font-size: 1.5rem;
+  }
+  .ai-art-creative-subheading {
+    font-size: 1.1rem;
+  }
+  .ai-art-creative-paragraph {
+    font-size: 0.9rem;
+  }
+}

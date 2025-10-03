@@ -1,0 +1,248 @@
+
+
+
+ /* === Parent Container === */
+.bloghero-container {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-left: 16rem;
+  margin-right: 16rem;
+
+}
+
+/* === Header Section === */
+.bloghero-header {
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bloghero-tech {
+  color: #00d4ef;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.bloghero-title {
+  color: white;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* === Main Row === */
+.bloghero-row {
+  min-height: 25rem;
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Main Image */
+.bloghero-mainimg {
+  flex: 3;
+}
+.bloghero-mainimg-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+/* Sidebar */
+.bloghero-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* === Author Box === */
+.bloghero-author {
+  border: 1px solid #004048;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background: transparent;
+}
+.bloghero-author-img {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.bloghero-author-details {
+  text-align: left;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+.bloghero-author-details h1 {
+  font-size: .8rem;
+  font-weight: 400;
+}
+.bloghero-author-details p {
+  font-size: 0.75rem;
+}
+
+/* === Share Article Box === */
+.bloghero-share {
+  border: 1px solid #004048;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.bloghero-share-title {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.bloghero-share-icons {
+  display: flex;
+  gap: 1.3rem;
+  margin-top: 0.5rem;
+}
+.bloghero-share-icon {
+  height: 1rem;
+  width: auto;
+}
+
+/* === Call to Action === */
+.bloghero-cta  {
+  color: white;
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.bloghero-cta-title {
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.bloghero-cta-btn {
+  /* display: inline-block; */
+  border: none;
+  border-radius: 9999px;
+  padding: 0.5rem 1.8rem;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: #00d4ef;
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+}
+
+
+/* === Responsive Styles === */
+
+/* Between 900px and 1240px */
+@media (max-width: 1240px) and (min-width: 900px) {
+  .bloghero-container {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .bloghero-row {
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .bloghero-mainimg {
+    flex: 2;
+  }
+
+  .bloghero-side {
+    flex: 1;
+  }
+
+  .bloghero-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* Tablets & small screens (<900px) */
+@media (max-width: 900px) {
+  .bloghero-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .bloghero-title {
+    font-size: 2.3rem;
+  }
+
+  .bloghero-row {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .bloghero-mainimg {
+    width: 100%;
+    margin-top: 7rem;
+  }
+
+  .bloghero-side {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloghero-author {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+   
+  }
+
+  .bloghero-share {
+    display: none;
+  }
+}
+
+/* Small mobiles (<600px) */
+@media (max-width: 600px) {
+  .bloghero-title {
+    font-size: 2.5rem;
+  }
+  .bloghero-tech {
+    font-size: 1.2rem;
+  }
+  .bloghero-author-img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .bloghero-author-details {
+    font-size: 0.65rem;
+  }
+  .bloghero-cta-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .blog1-p1 p{
+    margin: 0 0;
+  }
+}
+
+/* Large desktops (>1440px) */
+@media (min-width: 1440px) {
+  .bloghero-container {
+    max-width: 1400px;
+    margin: 4rem 8rem;
+  }
+  .bloghero-title {
+    font-size: 4.2rem;
+  }
+}

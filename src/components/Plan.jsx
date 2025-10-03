@@ -18,7 +18,7 @@ const PersonAddIcon = () => (
   </svg>
 );
 
-const Plan = ({ showExtra = true, showFeatures = true, showButton = true }) => {
+const Plan = ({ planType, showExtra = true, showFeatures = true, showButton = true, keepExtraSpace=true }) => {
   const [plusUserCount, setPlusUserCount] = useState(1);
   const [proUserCount, setProUserCount] = useState(1);
 
@@ -53,36 +53,42 @@ const Plan = ({ showExtra = true, showFeatures = true, showButton = true }) => {
               <br />
 
               {/* Extra Section → only visible if showExtra = true */}
-              {showExtra && (
-                <div className="user-count-container h-16 mb-3 visibility">
-                  <div className="user-count-inner flex items-center justify-center h-full relative">
-                    <div className="user-count-content w-[75%]">
-                      <div className="user-count-controls flex items-center justify-center mb-5 text-white">
-                        <button
-                          className="user-btn-disabled mx-2 px-4 py-2 border rounded-lg text-2xl border-gray-500 text-gray-500 cursor-default"
-                          onClick={handlePlusDecrement}
-                          aria-label="Decrease users"
-                        >
-                          <PersonRemoveIcon />
-                        </button>
-                        <div className="user-count-number min-w-14 xl:min-w-16 text-center text-2xl font-bold">1 x</div>
-                        <button
-                          onClick={handlePlusIncrement}
-                          className="user-btn-active mx-2 px-4 py-2 border rounded-lg text-2xl hover:bg-krutNeon hover:text-black hover:border-black zoomEffect"
-                          aria-label="Increase users"
-                        >
-                          <PersonAddIcon />
-                        </button>
-                      </div>
-                      <div className="user-contact text-center">
-                        <p className="text-sm">
-                          More Than 10 Users? <span className="text-krutNeon cursor-pointer">Contact<span className="text-transparent text-xs">.</span>Us</span>
-                        </p>
-                      </div>
+
+              <div className="user-count-container "
+                style={{
+                  display: planType === "free"
+                    ? (keepExtraSpace ? "block" : "none")
+                    : "block",
+                  visibility: planType === "free" && keepExtraSpace ? "hidden" : "visible"
+                }}>
+                <div className="user-count-inner ">
+                  <div className="user-count-content ">
+                    <div className="user-count-controls">
+                      <button
+                        className="user-btn-disabled "
+                        onClick={handlePlusDecrement}
+                        aria-label="Decrease users"
+                      >
+                        <PersonRemoveIcon />
+                      </button>
+                      <div className="user-count-number ">1 x</div>
+                      <button
+                        onClick={handlePlusIncrement}
+                        className="user-btn-active"
+                        aria-label="Increase users"
+                      >
+                        <PersonAddIcon />
+                      </button>
+                    </div>
+                    <div className="user-contact text-center">
+                      <p className="text-sm">
+                        More Than 10 Users? <span className="text-krutNeon cursor-pointer">Contact<span className="text-transparent text-xs">.</span>Us</span>
+                      </p>
                     </div>
                   </div>
                 </div>
-              )}
+              </div>
+
 
               <div className="button-container">
                 <button onClick={() => navigate("/login")} className="price-button try-for-free">Try for Free</button>
@@ -112,22 +118,22 @@ const Plan = ({ showExtra = true, showFeatures = true, showButton = true }) => {
               <br />
 
               {showExtra && (
-                <div className="user-count-container h-16 mb-3">
-                  <div className="user-count-inner flex items-center justify-center h-full relative">
-                    <div className="user-count-content w-[75%]">
-                      <div className="user-count-controls flex items-center justify-center mb-5 text-white">
+                <div className="user-count-container ">
+                  <div className="user-count-inner">
+                    <div className="user-count-content ">
+                      <div className="user-count-controls ">
                         <button
                           onClick={handlePlusDecrement}
-                          className="user-btn-disabled mx-2 px-4 py-2 border rounded-lg text-2xl border-gray-500 text-gray-500 cursor-pointer"
+                          className="user-btn-disabled"
                           aria-label="Decrease users">
                           <PersonRemoveIcon />
                         </button>
-                        <div className="user-count-number min-w-14 xl:min-w-16 text-center text-2xl font-bold">
+                        <div className="user-count-number ">
                           {plusUserCount} x
                         </div>
                         <button
                           onClick={handlePlusIncrement}
-                          className="user-btn-active mx-2 px-4 py-2 border rounded-lg text-2xl hover:bg-krutNeon hover:text-black hover:border-black zoomEffect"
+                          className="user-btn-active "
                           aria-label="Increase users">
                           <PersonAddIcon />
                         </button>
@@ -169,22 +175,22 @@ const Plan = ({ showExtra = true, showFeatures = true, showButton = true }) => {
               <br />
 
               {showExtra && (
-                <div className="user-count-container h-16 mb-3">
-                  <div className="user-count-inner flex items-center justify-center h-full relative">
-                    <div className="user-count-content w-[75%]">
-                      <div className="user-count-controls flex items-center justify-center mb-5 text-white">
+                <div className="user-count-container">
+                  <div className="user-count-inner ">
+                    <div className="user-count-content">
+                      <div className="user-count-controls ">
                         <button
                           onClick={handleProDecrement}
-                          className="user-btn-disabled mx-2 px-4 py-2 border rounded-lg text-2xl border-gray-500 text-gray-500 cursor-pointer"
+                          className="user-btn-disabled"
                           aria-label="Decrease users">
                           <PersonRemoveIcon />
                         </button>
-                        <div className="user-count-number min-w-14 xl:min-w-16 text-center text-2xl font-bold">
+                        <div className="user-count-number ">
                           {proUserCount} x
                         </div>
                         <button
                           onClick={handleProIncrement}
-                          className="user-btn-active mx-2 px-4 py-2 border rounded-lg text-2xl hover:bg-krutNeon hover:text-black hover:border-black zoomEffect"
+                          className="user-btn-active"
                           aria-label="Increase users">
                           <PersonAddIcon />
                         </button>

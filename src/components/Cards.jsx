@@ -3,11 +3,15 @@ import './Card.css'
 import one from '../assets/one.webp'
 import two from '../assets/two.webp'
 import three from '../assets/three.webp'
+import four from "../assets/four.webp"
+import five from "../assets/five.webp"
+import six from "../assets/six.webp"
 import discord from '../assets/discord.webp'
 import { useNavigate } from "react-router-dom"
+// import boxData from "./boxData";
 
 
-const Cards = ({ showDiscord = true, goBlogs = true }) => {
+const Cards = ({ showDiscord = true, goBlogs = true, showExtraCards = true }) => {
   const navigate = useNavigate()
 
   const data = [
@@ -15,29 +19,55 @@ const Cards = ({ showDiscord = true, goBlogs = true }) => {
       src: one,
       title: "How Does Krut AI Help E-commerce Brands?",
       desc: "Read more",
-      path: "/card1"
+
     },
     {
       src: two,
       title: "Introducing Krut AI: AI Co-Pilot For E-commerce Marketplaces",
       desc: "Read more",
-      path: "/card2"
+
     },
     {
       src: three,
       title: "Craft Ads Like A Pro: AI Guides Your Human Model Creation",
       desc: "Read more",
-      path: "/card3"
+
+    },
+
+    {
+      src:four,
+      title:"Top 5 Image Upscalers For Stunning 4k Results (in 2024)",
+      desc:"Read more",
+    },
+
+    {
+      src:five,
+      title:"Ideas to Visuals: The Art Of Al Product Photography",
+       desc:"Read more",
+    },
+
+    {
+      src:six,
+      title:"AI vs Human: Who Creates Better Art?",
+       desc:"Read more",
     },
 
 
+
+
   ]
+
+  const cardsToShow = showExtraCards ? data : data.slice(0, 3);
+
+
   return (
     <div className='cardbox-container'>
       <div className="card-boxes" >
-        {data.map((data, index) => (
-          <div className="card-box" key={index} onClick={() => navigate(data.path)} // 👈 navigate to path
-            style={{ cursor: "pointer" }}>
+        {cardsToShow.map((data, index) => (
+          <div className="card-box" key={index}  
+            style={{ cursor: "pointer" }}
+             onClick={() => navigate(`/blogs/${index + 1}`)} >
+
             <div className="card-box-media">
 
               <img src={data.src} alt={data.title} />
@@ -56,7 +86,7 @@ const Cards = ({ showDiscord = true, goBlogs = true }) => {
 
       {goBlogs && (
         <div className="goToButton">
-          <button>Go to Blogs</button>
+          <button onClick={()=>navigate("/blogs")}>Go to Blogs</button>
         </div>
 
       )}

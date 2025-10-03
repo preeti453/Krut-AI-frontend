@@ -28,7 +28,7 @@ const Blogs = () => {
                 <h1 className="blog-sidebar-title">
                     Recent Post
                 </h1>
-                <button className="button" onClick={()=> navigate("/card1")}>
+                <button className="button" onClick={() => navigate("/blogs/1")}>
                     Read more
                 </button>
             </div>

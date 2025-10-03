@@ -21,6 +21,9 @@ import ToolPageWrapper from './components/ToolPageWrapper'
 import PricingTable from './components/PricingTable'
 import Label from './components/Label'
 import Blogs from './components/Blogs'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import BlogPage from "./components/BlogPage";
+
 
 
 const router = createBrowserRouter(
@@ -40,8 +43,8 @@ const router = createBrowserRouter(
           <section className="secondContainer">
             <Tools />
             <Partners />
-            <Cards />
-            <Plan showExtra={false} showFeatures={true} showButton={true} />
+            <Cards showExtraCards={false} />
+            <Plan showExtra={false} showFeatures={true} showButton={true}  planType="free" keepExtraSpace={false}/>
             <Pic />
             <Footer />
           </section>
@@ -94,16 +97,18 @@ const router = createBrowserRouter(
       element: (
         <>
           <div className='maincontainer'>
-         
+            <div className="Container">
               <ScrollToTop />
               <Navigation />
               <Pricing />
-    
+            </div>
+
+
 
             <div className="secondContainer">
-              <Plan showExtra={true} showFeatures={true} showButton={true} />
+              <Plan planType="free" showExtra={true} showFeatures={true} showButton={true} />
               <Label />
-              <Plan showExtra={true} showFeatures={false} showButton={false} />
+              <Plan  planType="free" showExtra={true} showFeatures={false} showButton={false} />
               <PricingTable />
               <Faq />
               <Pic />
@@ -115,41 +120,7 @@ const router = createBrowserRouter(
 
     },
 
-    // {
-    //   path:"/card1",
-    //   element :(
-    //     <div className="maincontainer">
-    //        <ScrollToTop />
-    //       <Navigation/>
-    //       <Card1/>
-    //       <Footer/>
-    //     </div>
-    //   )
-    // },
 
-    //     {
-    //   path:"/card2",
-    //   element :(
-    //     <div className="maincontainer">
-    //        <ScrollToTop />
-    //       <Navigation/>
-    //       <Card2/>
-    //       <Footer/>
-    //     </div>
-    //   )
-    // },
-
-    //         {
-    //   path:"/card3",
-    //   element :(
-    //     <div className="maincontainer">
-    //        <ScrollToTop />
-    //       <Navigation/>
-    //       <Card3/>
-    //       <Footer/>
-    //     </div>
-    //   )
-    // },
 
     {
       path: "/bookademo",
@@ -166,6 +137,7 @@ const router = createBrowserRouter(
 
             <div className='secondContainer'>
               <Footer />
+
             </div>
           </div>
 
@@ -212,15 +184,28 @@ const router = createBrowserRouter(
       path: "/blogs",
       element: (
         <div className="maincontainer">
-          
+          <div className='Container'>
             <ScrollToTop />
             <Navigation />
             <Blogs />
-         
+          </div>
 
-          <Cards showDiscord={false} goBlogs={false} />
+
+
+          <Cards showDiscord={false} goBlogs={false} showExtraCards={true} />
           <Pic />
           <Footer />
+        </div>
+      )
+    },
+
+    {
+      path: "/blogs/:id",
+      element: (
+        <div className="maincontainer">
+          <Navigation/>
+          <BlogPage />
+          <Footer/>
         </div>
       )
     }
