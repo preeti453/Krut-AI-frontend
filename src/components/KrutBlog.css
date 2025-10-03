@@ -214,7 +214,7 @@
 /* Small mobiles (<600px) */
 @media (max-width: 600px) {
   .bloghero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .bloghero-tech {
     font-size: 1.2rem;

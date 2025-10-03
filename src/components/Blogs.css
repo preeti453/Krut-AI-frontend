@@ -20,13 +20,13 @@
 }
 
 .blog-title {
-  font-size: 1.875rem;   /* text-3xl */
-  font-weight: 700;      /* font-bold */
+  font-size: 1.875rem; 
+  font-weight: 700;     
 }
 
 @media(min-width: 640px) {
   .blog-title {
-    font-size: 3rem;     /* sm:text-5xl */
+    font-size: 3rem;    
   }
 
   /* .blog-section{
@@ -36,7 +36,7 @@
 
 @media(min-width: 1280px) {
   .blog-title {
-    font-size: 4.5rem;   /* xl:text-7xl */
+    font-size: 4.5rem;   
   }
 }
 
@@ -165,7 +165,7 @@
 
 @media(min-width: 1536px) {
   .blog-main-title {
-    font-size: 2.5rem;     /* 2xl:text-5xl */
+    font-size: 2.5rem;     
   }
 }
 

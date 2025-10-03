@@ -1,12 +1,13 @@
 // SupportDropdown.jsx
 import React from "react";
 import "./SupportDropdown.css";
+import { Link } from "react-router-dom";
 
 const SupportDropdown = () => {
   return (
     <div className="support-dropdown">
       {/* Blogs */}
-      <a href="/blogs" className="dropdown-link">
+      <Link to="/blogs" className="dropdown-link">
         <div className="dropdown-item">
           <div className="icon">
             <svg
@@ -34,9 +35,9 @@ const SupportDropdown = () => {
             <p className="subtitle">Discover more on our blog</p>
           </div>
         </div>
-      </a>
+      </Link>
 
-      {/* Tutorial */}
+      {/* Tutorial (external → keep <a>) */}
       <a
         href="https://krut-ai.notion.site/Krut-AI-Beta-User-Manual-b2d5df9733cd411e99b4e92a68c7c154"
         target="_blank"
@@ -66,7 +67,7 @@ const SupportDropdown = () => {
       </a>
 
       {/* Contact */}
-      <a href="/contact" className="dropdown-link">
+      <Link to="/contact" className="dropdown-link">
         <div className="dropdown-item">
           <div className="icon">
             <svg
@@ -88,7 +89,7 @@ const SupportDropdown = () => {
             <p className="subtitle">Connect with us via our contact page</p>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
