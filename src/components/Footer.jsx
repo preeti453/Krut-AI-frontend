@@ -100,7 +100,15 @@ const Footer = () => {
 
             {/* Location + Legal */}
             <p className="location">📍 Bengaluru, Karnataka, India</p>
-            <p className="legal">Privacy Policy | Terms & Conditions</p>
+            <p className="legal">
+                <a href="/privacy_policy" className='anchor-links'>
+                 Privacy Policy  &nbsp;
+                </a>
+                    |
+                <a href="/terms&conditions" className='anchor-links'>
+                 &nbsp;Terms & Conditions
+                </a>
+            </p>
             <p className="legal copyright">©2024 Krut AI</p>
 
 

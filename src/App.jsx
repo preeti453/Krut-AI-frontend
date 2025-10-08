@@ -23,6 +23,8 @@ import Label from './components/Label'
 import Blogs from './components/Blogs'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BlogPage from "./components/BlogPage";
+import Policy from './components/Policy'
+import TermsAndConditions from './components/TermsAndConditions'
 
 
 
@@ -208,7 +210,28 @@ const router = createBrowserRouter(
           <Footer/>
         </div>
       )
-    }
+    },
+    {
+      path:"/privacy_policy",
+      element:(
+        <div className="maincontainer">
+          <Navigation/>
+          <Policy/>
+          <Footer/>
+        </div>
+      )
+    },
+    {
+      path:"/terms&conditions",
+      element:(
+        <div className="maincontainer">
+          <Navigation/>
+          <TermsAndConditions/>
+          <Footer/>
+        </div>
+      )
+    },
+
 
 
 

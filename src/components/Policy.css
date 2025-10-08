@@ -1,0 +1,94 @@
+.privacy-root {
+  /* background: #181f2a; */
+  color: #fff;
+  margin: 5rem 8rem 5rem 8rem;
+  /* padding: 2rem 2rem; */
+  max-width: 1000px;
+  /* border-radius: 20px; */
+  /* font-family: 'Segoe UI', Arial, sans-serif; */
+  /* box-shadow: 0 4px 32px 0 rgba(32,40,75,0.2); */
+  /* line-height: 1.75; */
+}
+
+.privacy-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .privacy-title { font-size: 3.75rem; }
+
+}
+@media (min-width: 1280px) {
+  .privacy-title { font-size: 6rem; }
+}
+
+
+
+.privacy-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 640px) {
+  .privacy-heading { font-size: 1.8rem;  font-weight: 550; }
+}
+
+.privacy-date {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-top: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.privacy-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 2.7rem 0 1.2rem 0;
+}
+
+.privacy-section-subtitle {
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin: 1.1rem 0 0.7rem 0;
+}
+
+.privacy-link {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.18s;
+}
+/* .privacy-link:hover { color: #95eeff; } */
+
+.ordered-list, .unordered-list {
+  margin-left: 2.2rem;
+  margin-bottom: 1.6rem;
+  padding-left: 0;
+  font-size: 1.125rem;
+}
+ .ordered-list li { margin-bottom: 1rem;  font-size: 1rem;}
+.unordered-list li { margin-bottom: 1rem;  font-size: 1rem;}
+
+.p-graph{
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .privacy-root {
+    padding: 2rem 0.7rem;
+    margin: 2rem 1rem;
+  }
+  .privacy-title { font-size: 2.2rem; }
+  .privacy-heading { font-size: 1.25rem; }
+  .privacy-section-title { font-size: 1.15rem; }
+}
+@media (max-width: 600px) {
+  .privacy-root {
+    padding: 1.2rem 0.3rem;
+    font-size: 1rem;
+  }
+  /* .privacy-title { font-size: 1.1rem; } */
+}
